@@ -33,6 +33,18 @@ app.get('/login', (req, res) => {
 
 
 
+app.get('/login/callback', (req, res) => {
+    console.log(req);
+    console.log('GET callback received');
+});
+
+app.post('/login/callback', (req, res) => {
+    console.log(req);
+    console.log('POST callback received');
+});
+
+
+
 
 
 app.listen(process.env.PORT, () => console.log(`Server running at port ${process.env.PORT}`));
