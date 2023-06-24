@@ -15,7 +15,10 @@ app.get('/login', (req, res) => {
     const csrfState = createCsrfState();
     res.cookie('csrfState', csrfState, { maxAge: 60000 });
 
-    let url = 'https://open-api.tiktok.com/platform/oauth/connect/';
+    // OLD URL: 
+    // let url = 'https://open-api.tiktok.com/platform/oauth/connect/';
+    
+    let url = 'https://www.tiktok.com/v2/auth/authorize/';
 
     url += `?client_key=${process.env.TIKTOK_API_CLIENT_KEY}`;
     url += '&scope=user.info.basic';
