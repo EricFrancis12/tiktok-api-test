@@ -24,7 +24,7 @@ app.get('/login', (req, res) => {
     let url = 'https://www.tiktok.com/v2/auth/authorize/';
 
     url += `?client_key=${process.env.TIKTOK_API_CLIENT_KEY}`;
-    url += '&scope=user.info.basic';
+    url += '&scope=video.upload';
     url += '&response_type=code';
     url += `&redirect_uri=${encodeURIComponent(process.env.TIKTOK_CALLBACK_URI)}`;
     url += '&state=' + csrfState;
@@ -63,39 +63,40 @@ app.post('/login/callback', (req, res) => {
 app.get('/upload/drafts', async (req, res) => {
     const access_token = req.query.access_token;
     console.log(access_token);
-    const video_url = 'https://vcube.live/video-1.mp4';
+    const video_url = 'https://vcube.live/money-1.mp4';
 
     try {
         const endpoint = 'https://open.tiktokapis.com/v2/post/publish/inbox/video/init/?access_token=' + access_token;
 
-        // const headers = {
-        //     Authorization: `Bearer ${access_token}`,
-        //     'Content-Type': 'application/json'
-        // }
+        const headers = {
+            Authorization: `Bearer ${access_token}`,
+            'Content-Type': 'application/json'
+        }
 
-        // const requestBody = {
-        //     source_info: {
-        //         source: 'PULL_FROM_URL',
-        //         video_url
-        //     }
-        // };
-
-        // const response = await axios.post(endpoint, requestBody, { headers });
-
-        const response = await fetch(endpoint, {
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${access_token}`
-            },
-            method: 'POST',
-            body: {
-                source_info: {
-                    source: 'PULL_FROM_URL',
-                    video_url
-                }
+        const requestBody = {
+            source_info: {
+                source: 'PULL_FROM_URL',
+                video_url
             }
-        });
-        const resJSON = await response.json();
+        };
+
+        const resJSON = await axios.post(endpoint, requestBody, { headers });
+
+        // const response = await fetch(endpoint, {
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //         'Authorization': `Bearer ${access_token}`
+        //     },
+        //     method: 'POST',
+        //     body: {
+        //         source_info: {
+        //             source: 'PULL_FROM_URL',
+        //             video_url
+        //         }
+        //     }
+        // });
+        // const resJSON = await response.json();
+
         console.log('Video added to drafts:', resJSON);
 
         res.status(200).json({
@@ -103,10 +104,10 @@ app.get('/upload/drafts', async (req, res) => {
             message: resJSON
         });
     } catch (error) {
-        console.error('Error adding video to drafts:', error);
+        console.error('Error adding video to drafts:', error.message);
         return res.status(500).json({
             success: false,
-            error
+            message: error.message
         });
     }
 });
