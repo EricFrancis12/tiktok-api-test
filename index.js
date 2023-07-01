@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const axios = require('axios');
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
 const express = require('express');
 const app = express();
@@ -67,32 +68,47 @@ app.get('/upload/drafts', async (req, res) => {
     try {
         const endpoint = 'https://open.tiktokapis.com/v2/post/publish/inbox/video/init/?access_token=' + access_token;
 
-        const headers = {
-            Authorization: `Bearer ${access_token}`,
-            'Content-Type': 'application/json'
-        }
+        // const headers = {
+        //     Authorization: `Bearer ${access_token}`,
+        //     'Content-Type': 'application/json'
+        // }
 
-        const requestBody = {
-            source_info: {
-                source: 'PULL_FROM_URL',
-                video_url
+        // const requestBody = {
+        //     source_info: {
+        //         source: 'PULL_FROM_URL',
+        //         video_url
+        //     }
+        // };
+
+        // const response = await axios.post(endpoint, requestBody, { headers });
+
+        const response = await fetch(endpoint, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${access_token}`
+            },
+            method: 'POST',
+            body: {
+                source_info: {
+                    source: 'PULL_FROM_URL',
+                    video_url
+                }
             }
-        };
+        });
+        const resJSON = await response.json();
+        console.log('Video added to drafts:', resJSON);
 
-        const response = await axios.post(endpoint, requestBody, { headers });
-        console.log('Video added to drafts:', response.data);
+        res.status(200).json({
+            success: true,
+            message: resJSON
+        });
     } catch (error) {
-        console.error('Error adding video to drafts:', error.response.data);
+        console.error('Error adding video to drafts:', error);
         return res.status(500).json({
             success: false,
-            message: error.response.data
+            error
         });
     }
-
-    res.status(200).json({
-        success: true,
-        message: response.data
-    })
 });
 
 
