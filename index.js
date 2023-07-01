@@ -61,20 +61,38 @@ app.post('/login/callback', (req, res) => {
 
 app.get('/upload/drafts', async (req, res) => {
     const access_token = req.query.access_token;
-    const videoUrl = 'https://vcube.live/video-1.mp4';
+    console.log(access_token);
+    const video_url = 'https://vcube.live/video-1.mp4';
 
     try {
-        const endpoint = 'https://api.tiktok.com/draft/post/?access_token=' + access_token;
+        const endpoint = 'https://open.tiktokapis.com/v2/post/publish/inbox/video/init/?access_token=' + access_token;
+
+        const headers = {
+            Authorization: `Bearer ${access_token}`,
+            'Content-Type': 'application/json'
+        }
 
         const requestBody = {
-            itemUrls: [videoUrl],
+            source_info: {
+                source: 'PULL_FROM_URL',
+                video_url
+            }
         };
 
-        const response = await axios.post(endpoint, requestBody);
+        const response = await axios.post(endpoint, requestBody, { headers });
         console.log('Video added to drafts:', response.data);
     } catch (error) {
         console.error('Error adding video to drafts:', error.response.data);
+        return res.status(500).json({
+            success: false,
+            message: error.response.data
+        });
     }
+
+    res.status(200).json({
+        success: true,
+        message: response.data
+    })
 });
 
 
