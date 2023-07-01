@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+const axios = require('axios');
+
 const express = require('express');
 const app = express();
 
@@ -51,6 +53,28 @@ app.post('/login/callback', (req, res) => {
     console.log(req);
     console.log(req.body);
     console.log('POST callback received');
+});
+
+
+
+
+
+app.get('/upload/drafts', async (req, res) => {
+    const access_token = req.query.access_token;
+    const videoUrl = 'https://vcube.live/video-1.mp4';
+
+    try {
+        const endpoint = 'https://api.tiktok.com/draft/post/?access_token=' + access_token;
+
+        const requestBody = {
+            itemUrls: [videoUrl],
+        };
+
+        const response = await axios.post(endpoint, requestBody);
+        console.log('Video added to drafts:', response.data);
+    } catch (error) {
+        console.error('Error adding video to drafts:', error.response.data);
+    }
 });
 
 
