@@ -68,34 +68,32 @@ app.get('/upload/drafts', async (req, res) => {
     try {
         const endpoint = 'https://open.tiktokapis.com/v2/post/publish/inbox/video/init/?access_token=' + access_token;
 
-        const headers = {
-            Authorization: `Bearer ${access_token}`,
-            'Content-Type': 'application/json'
-        }
-
-        const requestBody = {
-            source_info: {
-                source: 'PULL_FROM_URL',
-                video_url
-            }
-        };
-
-        const resJSON = await axios.post(endpoint, requestBody, { headers });
-
-        // const response = await fetch(endpoint, {
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //         'Authorization': `Bearer ${access_token}`
-        //     },
-        //     method: 'POST',
-        //     body: {
-        //         source_info: {
-        //             source: 'PULL_FROM_URL',
-        //             video_url
-        //         }
+        // const headers = {
+        //     Authorization: `Bearer ${access_token}`,
+        //     'Content-Type': 'application/json'
+        // }
+        // const requestBody = {
+        //     source_info: {
+        //         source: 'PULL_FROM_URL',
+        //         video_url
         //     }
-        // });
-        // const resJSON = await response.json();
+        // };
+        // const resJSON = await axios.post(endpoint, requestBody, { headers });
+
+        const response = await fetch(endpoint, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${access_token}`
+            },
+            method: 'POST',
+            body: {
+                source_info: {
+                    source: 'PULL_FROM_URL',
+                    video_url
+                }
+            }
+        });
+        const resJSON = await response.json();
 
         console.log('Video added to drafts:', resJSON);
 
