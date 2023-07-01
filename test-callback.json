@@ -1,0 +1,844 @@
+//https://www.tiktok.com/v2/auth/authorize/?client_key=awy89dxjuczqrrzk&scope=user.info.basic&response_type=code&redirect_uri=https%3A%2F%2Ftiktok-api-test.onrender.com%2Flogin%2Fcallback&state=cuqq0u
+{
+    _readableState: ReadableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      buffer: BufferList { head: null, tail: null, length: 0
+        },
+      length: 0,
+      pipes: [],
+      flowing: null,
+      ended: false,
+      endEmitted: false,
+      reading: false,
+      sync: true,
+      needReadable: false,
+      emittedReadable: false,
+      readableListening: false,
+      resumeScheduled: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      destroyed: false,
+      errored: null,
+      closed: false,
+      closeEmitted: false,
+      defaultEncoding: 'utf8',
+      awaitDrainWriters: null,
+      multiAwaitDrain: false,
+      readingMore: true,
+      decoder: null,
+      encoding: null,
+        [Symbol(kPaused)
+        ]: null
+    },
+    _events: [Object: null prototype
+    ] { end: [Function: clearRequestTimeout
+        ]
+    },
+    _eventsCount: 1,
+    _maxListeners: undefined,
+    socket: <ref *1> Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: null,
+      _readableState: ReadableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        buffer: BufferList { head: null, tail: null, length: 0
+            },
+        length: 0,
+        pipes: [],
+        flowing: true,
+        ended: false,
+        endEmitted: false,
+        reading: true,
+        sync: false,
+        needReadable: true,
+        emittedReadable: false,
+        readableListening: false,
+        resumeScheduled: false,
+        errorEmitted: false,
+        emitClose: false,
+        autoDestroy: false,
+        destroyed: false,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        defaultEncoding: 'utf8',
+        awaitDrainWriters: null,
+        multiAwaitDrain: false,
+        readingMore: false,
+        decoder: null,
+        encoding: null,
+            [Symbol(kPaused)
+            ]: false
+        },
+      _events: [Object: null prototype
+        ] {
+        end: [Array
+            ],
+        timeout: [Function: socketOnTimeout
+            ],
+        data: [Function: bound socketOnData
+            ],
+        error: [Function: socketOnError
+            ],
+        close: [Array
+            ],
+        drain: [Function: bound socketOnDrain
+            ],
+        resume: [Function: onSocketResume
+            ],
+        pause: [Function: onSocketPause
+            ]
+        },
+      _eventsCount: 8,
+      _maxListeners: undefined,
+      _writableState: WritableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        finalCalled: false,
+        needDrain: false,
+        ending: false,
+        ended: false,
+        finished: false,
+        destroyed: false,
+        decodeStrings: false,
+        defaultEncoding: 'utf8',
+        length: 0,
+        writing: false,
+        corked: 0,
+        sync: true,
+        bufferProcessing: false,
+        onwrite: [Function: bound onwrite
+            ],
+        writecb: null,
+        writelen: 0,
+        afterWriteTickInfo: null,
+        buffered: [],
+        bufferedIndex: 0,
+        allBuffers: true,
+        allNoop: true,
+        pendingcb: 0,
+        prefinished: false,
+        errorEmitted: false,
+        emitClose: false,
+        autoDestroy: false,
+        errored: null,
+        closed: false,
+        closeEmitted: false
+        },
+      allowHalfOpen: true,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: Server {
+        maxHeaderSize: undefined,
+        insecureHTTPParser: undefined,
+        _events: [Object: null prototype
+            ],
+        _eventsCount: 2,
+        _maxListeners: undefined,
+        _connections: 1,
+        _handle: [TCP
+            ],
+        _usingWorkers: false,
+        _workers: [],
+        _unref: false,
+        allowHalfOpen: true,
+        pauseOnConnect: false,
+        httpAllowHalfOpen: false,
+        timeout: 0,
+        keepAliveTimeout: 5000,
+        maxHeadersCount: null,
+        headersTimeout: 60000,
+        requestTimeout: 0,
+        _connectionKey: '6: : : : 10000',
+            [Symbol(IncomingMessage)
+            ]: [Function: IncomingMessage
+            ],
+            [Symbol(ServerResponse)
+            ]: [Function: ServerResponse
+            ],
+            [Symbol(kCapture)
+            ]: false,
+            [Symbol(async_id_symbol)
+            ]: 3
+        },
+      _server: Server {
+        maxHeaderSize: undefined,
+        insecureHTTPParser: undefined,
+        _events: [Object: null prototype
+            ],
+        _eventsCount: 2,
+        _maxListeners: undefined,
+        _connections: 1,
+        _handle: [TCP
+            ],
+        _usingWorkers: false,
+        _workers: [],
+        _unref: false,
+        allowHalfOpen: true,
+        pauseOnConnect: false,
+        httpAllowHalfOpen: false,
+        timeout: 0,
+        keepAliveTimeout: 5000,
+        maxHeadersCount: null,
+        headersTimeout: 60000,
+        requestTimeout: 0,
+        _connectionKey: '6: : : : 10000',
+            [Symbol(IncomingMessage)
+            ]: [Function: IncomingMessage
+            ],
+            [Symbol(ServerResponse)
+            ]: [Function: ServerResponse
+            ],
+            [Symbol(kCapture)
+            ]: false,
+            [Symbol(async_id_symbol)
+            ]: 3
+        },
+      parser: HTTPParser {
+        '0': [Function: bound setRequestTimeout
+            ],
+        '1': [Function: parserOnHeaders
+            ],
+        '2': [Function: parserOnHeadersComplete
+            ],
+        '3': [Function: parserOnBody
+            ],
+        '4': [Function: parserOnMessageComplete
+            ],
+        '5': [Function: bound onParserExecute
+            ],
+        '6': [Function: bound onParserTimeout
+            ],
+        _headers: [],
+        _url: '',
+        socket: [Circular *1
+            ],
+        incoming: [Circular *2
+            ],
+        outgoing: null,
+        maxHeaderPairs: 2000,
+        _consumed: true,
+        onIncoming: [Function: bound parserOnIncoming
+            ],
+            [Symbol(resource_symbol)
+            ]: [HTTPServerAsyncResource
+            ]
+        },
+      on: [Function: socketListenerWrap
+        ],
+      addListener: [Function: socketListenerWrap
+        ],
+      prependListener: [Function: socketListenerWrap
+        ],
+      _paused: false,
+      _httpMessage: ServerResponse {
+        _events: [Object: null prototype
+            ],
+        _eventsCount: 1,
+        _maxListeners: undefined,
+        outputData: [],
+        outputSize: 0,
+        writable: true,
+        destroyed: false,
+        _last: false,
+        chunkedEncoding: false,
+        shouldKeepAlive: true,
+        _defaultKeepAlive: true,
+        useChunkedEncodingByDefault: true,
+        sendDate: true,
+        _removedConnection: false,
+        _removedContLen: false,
+        _removedTE: false,
+        _contentLength: null,
+        _hasBody: true,
+        _trailer: '',
+        finished: false,
+        _headerSent: false,
+        socket: [Circular *1
+            ],
+        _header: null,
+        _keepAliveTimeout: 5000,
+        _onPendingData: [Function: bound updateOutgoingData
+            ],
+        _sent100: false,
+        _expect_continue: false,
+        req: [Circular *2
+            ],
+        locals: [Object: null prototype
+            ] {},
+            [Symbol(kCapture)
+            ]: false,
+            [Symbol(kNeedDrain)
+            ]: false,
+            [Symbol(corked)
+            ]: 0,
+            [Symbol(kOutHeaders)
+            ]: [Object: null prototype
+            ]
+        },
+        [Symbol(async_id_symbol)
+        ]: 38,
+        [Symbol(kHandle)
+        ]: TCP {
+        reading: true,
+        onconnection: null,
+        _consumed: true,
+            [Symbol(owner_symbol)
+            ]: [Circular *1
+            ]
+        },
+        [Symbol(kSetNoDelay)
+        ]: false,
+        [Symbol(lastWriteQueueSize)
+        ]: 0,
+        [Symbol(timeout)
+        ]: null,
+        [Symbol(kBuffer)
+        ]: null,
+        [Symbol(kBufferCb)
+        ]: null,
+        [Symbol(kBufferGen)
+        ]: null,
+        [Symbol(kCapture)
+        ]: false,
+        [Symbol(kBytesRead)
+        ]: 0,
+        [Symbol(kBytesWritten)
+        ]: 0,
+        [Symbol(RequestTimeout)
+        ]: undefined
+    },
+    httpVersionMajor: 1,
+    httpVersionMinor: 1,
+    httpVersion: '1.1',
+    complete: false,
+    headers: {
+      host: 'tiktok-api-test.onrender.com',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,* /*;q=0.8',
+      'accept-encoding': 'gzip',
+      'accept-language': 'en-US,en;q=0.9',
+      'cdn-loop': 'cloudflare; subreqs=1',
+      'cf-connecting-ip': '66.45.149.122',
+      'cf-ew-via': '15',
+      'cf-ipcountry': 'US',
+      'cf-ray': '7dfb8ed1b6c526ea-FSD',
+      'cf-visitor': '{"scheme":"https"}',
+      'cf-worker': 'onrender.com',
+      cookie: 'csrfState=cuqq0u',
+      referer: 'https://www.tiktok.com/',
+      'render-proxy-ttl': '4',
+      'sec-ch-ua': '"Not.A/Brand";v="8", "Chromium";v="114", "Brave";v="114"',
+      'sec-ch-ua-mobile': '?0',
+      'sec-ch-ua-platform': '"Windows"',
+      'sec-fetch-dest': 'document',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-site': 'cross-site',
+      'sec-fetch-user': '?1',
+      'sec-gpc': '1',
+      'true-client-ip': '66.45.149.122',
+      'upgrade-insecure-requests': '1',
+      'x-forwarded-for': '66.45.149.122, 172.68.58.136, 10.223.115.52',
+      'x-forwarded-proto': 'https',
+      'x-request-start': '1688182095685218'
+    },
+    rawHeaders: [
+      'Host',
+      'tiktok-api-test.onrender.com',
+      'User-Agent',
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+      'Accept',
+      'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+      'Accept-Encoding',
+      'gzip',
+      'Accept-Language',
+      'en-US,en;q=0.9',
+      'Cdn-Loop',
+      'cloudflare; subreqs=1',
+      'Cf-Connecting-Ip',
+      '66.45.149.122',
+      'Cf-Ew-Via',
+      '15',
+      'Cf-Ipcountry',
+      'US',
+      'Cf-Ray',
+      '7dfb8ed1b6c526ea-FSD',
+      'Cf-Visitor',
+      '{
+            "scheme": "https"
+        }',
+      'Cf-Worker',
+      'onrender.com',
+      'Cookie',
+      'csrfState=cuqq0u',
+      'Referer',
+      'https: //www.tiktok.com/',
+      'Render-Proxy-Ttl',
+      '4',
+      'Sec-Ch-Ua',
+      '"Not.A/Brand";v="8",
+        "Chromium";v="114",
+        "Brave";v="114"',
+      'Sec-Ch-Ua-Mobile',
+      '?0',
+      'Sec-Ch-Ua-Platform',
+      '"Windows"',
+      'Sec-Fetch-Dest',
+      'document',
+      'Sec-Fetch-Mode',
+      'navigate',
+      'Sec-Fetch-Site',
+      'cross-site',
+      'Sec-Fetch-User',
+      '?1',
+      'Sec-Gpc',
+      '1',
+      'True-Client-Ip',
+      '66.45.149.122',
+      'Upgrade-Insecure-Requests',
+      '1',
+      'X-Forwarded-For',
+      '66.45.149.122,
+        172.68.58.136,
+        10.223.115.52',
+      'X-Forwarded-Proto',
+      'https',
+      'X-Request-Start',
+      '1688182095685218'
+    ],
+    trailers: {},
+    rawTrailers: [],
+    aborted: false,
+    upgrade: false,
+    url: '/login/callback/?code=8UwWaEBkJm_d3YuDgh6l5N9aPgDTaDMgnLQGaCVsQo2GUc04z96HA0t5yg9FsXVxX8WwqAxDRKDnS9AfBOme3JnZ1Se6QUjBOVKmORRA0qZ3QcY-h03nfBc_B6vcyHXkp_1Su7seRPsfJts-W4OkSr7iDctaCynNIXxnLd0SUBPvA07SA5hXkamkmY94jqK1Eqq1SHkDnsYSX17U0vVpxg%2A0%216453&scopes=user.info.basic&state=cuqq0u',
+    method: 'GET',
+    statusCode: null,
+    statusMessage: null,
+    client: <ref *1> Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: null,
+      _readableState: ReadableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        buffer: BufferList { head: null, tail: null, length: 0
+            },
+        length: 0,
+        pipes: [],
+        flowing: true,
+        ended: false,
+        endEmitted: false,
+        reading: true,
+        sync: false,
+        needReadable: true,
+        emittedReadable: false,
+        readableListening: false,
+        resumeScheduled: false,
+        errorEmitted: false,
+        emitClose: false,
+        autoDestroy: false,
+        destroyed: false,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        defaultEncoding: 'utf8',
+        awaitDrainWriters: null,
+        multiAwaitDrain: false,
+        readingMore: false,
+        decoder: null,
+        encoding: null,
+            [Symbol(kPaused)
+            ]: false
+        },
+      _events: [Object: null prototype
+        ] {
+        end: [Array
+            ],
+        timeout: [Function: socketOnTimeout
+            ],
+        data: [Function: bound socketOnData
+            ],
+        error: [Function: socketOnError
+            ],
+        close: [Array
+            ],
+        drain: [Function: bound socketOnDrain
+            ],
+        resume: [Function: onSocketResume
+            ],
+        pause: [Function: onSocketPause
+            ]
+        },
+      _eventsCount: 8,
+      _maxListeners: undefined,
+      _writableState: WritableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        finalCalled: false,
+        needDrain: false,
+        ending: false,
+        ended: false,
+        finished: false,
+        destroyed: false,
+        decodeStrings: false,
+        defaultEncoding: 'utf8',
+        length: 0,
+        writing: false,
+        corked: 0,
+        sync: true,
+        bufferProcessing: false,
+        onwrite: [Function: bound onwrite
+            ],
+        writecb: null,
+        writelen: 0,
+        afterWriteTickInfo: null,
+        buffered: [],
+        bufferedIndex: 0,
+        allBuffers: true,
+        allNoop: true,
+        pendingcb: 0,
+        prefinished: false,
+        errorEmitted: false,
+        emitClose: false,
+        autoDestroy: false,
+        errored: null,
+        closed: false,
+        closeEmitted: false
+        },
+      allowHalfOpen: true,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: Server {
+        maxHeaderSize: undefined,
+        insecureHTTPParser: undefined,
+        _events: [Object: null prototype
+            ],
+        _eventsCount: 2,
+        _maxListeners: undefined,
+        _connections: 1,
+        _handle: [TCP
+            ],
+        _usingWorkers: false,
+        _workers: [],
+        _unref: false,
+        allowHalfOpen: true,
+        pauseOnConnect: false,
+        httpAllowHalfOpen: false,
+        timeout: 0,
+        keepAliveTimeout: 5000,
+        maxHeadersCount: null,
+        headersTimeout: 60000,
+        requestTimeout: 0,
+        _connectionKey: '6: : : : 10000',
+            [Symbol(IncomingMessage)
+            ]: [Function: IncomingMessage
+            ],
+            [Symbol(ServerResponse)
+            ]: [Function: ServerResponse
+            ],
+            [Symbol(kCapture)
+            ]: false,
+            [Symbol(async_id_symbol)
+            ]: 3
+        },
+      _server: Server {
+        maxHeaderSize: undefined,
+        insecureHTTPParser: undefined,
+        _events: [Object: null prototype
+            ],
+        _eventsCount: 2,
+        _maxListeners: undefined,
+        _connections: 1,
+        _handle: [TCP
+            ],
+        _usingWorkers: false,
+        _workers: [],
+        _unref: false,
+        allowHalfOpen: true,
+        pauseOnConnect: false,
+        httpAllowHalfOpen: false,
+        timeout: 0,
+        keepAliveTimeout: 5000,
+        maxHeadersCount: null,
+        headersTimeout: 60000,
+        requestTimeout: 0,
+        _connectionKey: '6: : : : 10000',
+            [Symbol(IncomingMessage)
+            ]: [Function: IncomingMessage
+            ],
+            [Symbol(ServerResponse)
+            ]: [Function: ServerResponse
+            ],
+            [Symbol(kCapture)
+            ]: false,
+            [Symbol(async_id_symbol)
+            ]: 3
+        },
+      parser: HTTPParser {
+        '0': [Function: bound setRequestTimeout
+            ],
+        '1': [Function: parserOnHeaders
+            ],
+        '2': [Function: parserOnHeadersComplete
+            ],
+        '3': [Function: parserOnBody
+            ],
+        '4': [Function: parserOnMessageComplete
+            ],
+        '5': [Function: bound onParserExecute
+            ],
+        '6': [Function: bound onParserTimeout
+            ],
+        _headers: [],
+        _url: '',
+        socket: [Circular *1
+            ],
+        incoming: [Circular *2
+            ],
+        outgoing: null,
+        maxHeaderPairs: 2000,
+        _consumed: true,
+        onIncoming: [Function: bound parserOnIncoming
+            ],
+            [Symbol(resource_symbol)
+            ]: [HTTPServerAsyncResource
+            ]
+        },
+      on: [Function: socketListenerWrap
+        ],
+      addListener: [Function: socketListenerWrap
+        ],
+      prependListener: [Function: socketListenerWrap
+        ],
+      _paused: false,
+      _httpMessage: ServerResponse {
+        _events: [Object: null prototype
+            ],
+        _eventsCount: 1,
+        _maxListeners: undefined,
+        outputData: [],
+        outputSize: 0,
+        writable: true,
+        destroyed: false,
+        _last: false,
+        chunkedEncoding: false,
+        shouldKeepAlive: true,
+        _defaultKeepAlive: true,
+        useChunkedEncodingByDefault: true,
+        sendDate: true,
+        _removedConnection: false,
+        _removedContLen: false,
+        _removedTE: false,
+        _contentLength: null,
+        _hasBody: true,
+        _trailer: '',
+        finished: false,
+        _headerSent: false,
+        socket: [Circular *1
+            ],
+        _header: null,
+        _keepAliveTimeout: 5000,
+        _onPendingData: [Function: bound updateOutgoingData
+            ],
+        _sent100: false,
+        _expect_continue: false,
+        req: [Circular *2
+            ],
+        locals: [Object: null prototype
+            ] {},
+            [Symbol(kCapture)
+            ]: false,
+            [Symbol(kNeedDrain)
+            ]: false,
+            [Symbol(corked)
+            ]: 0,
+            [Symbol(kOutHeaders)
+            ]: [Object: null prototype
+            ]
+        },
+        [Symbol(async_id_symbol)
+        ]: 38,
+        [Symbol(kHandle)
+        ]: TCP {
+        reading: true,
+        onconnection: null,
+        _consumed: true,
+            [Symbol(owner_symbol)
+            ]: [Circular *1
+            ]
+        },
+        [Symbol(kSetNoDelay)
+        ]: false,
+        [Symbol(lastWriteQueueSize)
+        ]: 0,
+        [Symbol(timeout)
+        ]: null,
+        [Symbol(kBuffer)
+        ]: null,
+        [Symbol(kBufferCb)
+        ]: null,
+        [Symbol(kBufferGen)
+        ]: null,
+        [Symbol(kCapture)
+        ]: false,
+        [Symbol(kBytesRead)
+        ]: 0,
+        [Symbol(kBytesWritten)
+        ]: 0,
+        [Symbol(RequestTimeout)
+        ]: undefined
+    },
+    _consuming: false,
+    _dumped: false,
+    next: [Function: next
+    ],
+    baseUrl: '',
+    originalUrl: '/login/callback/?code=8UwWaEBkJm_d3YuDgh6l5N9aPgDTaDMgnLQGaCVsQo2GUc04z96HA0t5yg9FsXVxX8WwqAxDRKDnS9AfBOme3JnZ1Se6QUjBOVKmORRA0qZ3QcY-h03nfBc_B6vcyHXkp_1Su7seRPsfJts-W4OkSr7iDctaCynNIXxnLd0SUBPvA07SA5hXkamkmY94jqK1Eqq1SHkDnsYSX17U0vVpxg%2A0%216453&scopes=user.info.basic&state=cuqq0u',
+    _parsedUrl: Url {
+      protocol: null,
+      slashes: null,
+      auth: null,
+      host: null,
+      port: null,
+      hostname: null,
+      hash: null,
+      search: '?code=8UwWaEBkJm_d3YuDgh6l5N9aPgDTaDMgnLQGaCVsQo2GUc04z96HA0t5yg9FsXVxX8WwqAxDRKDnS9AfBOme3JnZ1Se6QUjBOVKmORRA0qZ3QcY-h03nfBc_B6vcyHXkp_1Su7seRPsfJts-W4OkSr7iDctaCynNIXxnLd0SUBPvA07SA5hXkamkmY94jqK1Eqq1SHkDnsYSX17U0vVpxg%2A0%216453&scopes=user.info.basic&state=cuqq0u',
+      query: 'code=8UwWaEBkJm_d3YuDgh6l5N9aPgDTaDMgnLQGaCVsQo2GUc04z96HA0t5yg9FsXVxX8WwqAxDRKDnS9AfBOme3JnZ1Se6QUjBOVKmORRA0qZ3QcY-h03nfBc_B6vcyHXkp_1Su7seRPsfJts-W4OkSr7iDctaCynNIXxnLd0SUBPvA07SA5hXkamkmY94jqK1Eqq1SHkDnsYSX17U0vVpxg%2A0%216453&scopes=user.info.basic&state=cuqq0u',
+      pathname: '/login/callback/',
+      path: '/login/callback/?code=8UwWaEBkJm_d3YuDgh6l5N9aPgDTaDMgnLQGaCVsQo2GUc04z96HA0t5yg9FsXVxX8WwqAxDRKDnS9AfBOme3JnZ1Se6QUjBOVKmORRA0qZ3QcY-h03nfBc_B6vcyHXkp_1Su7seRPsfJts-W4OkSr7iDctaCynNIXxnLd0SUBPvA07SA5hXkamkmY94jqK1Eqq1SHkDnsYSX17U0vVpxg%2A0%216453&scopes=user.info.basic&state=cuqq0u',
+      href: '/login/callback/?code=8UwWaEBkJm_d3YuDgh6l5N9aPgDTaDMgnLQGaCVsQo2GUc04z96HA0t5yg9FsXVxX8WwqAxDRKDnS9AfBOme3JnZ1Se6QUjBOVKmORRA0qZ3QcY-h03nfBc_B6vcyHXkp_1Su7seRPsfJts-W4OkSr7iDctaCynNIXxnLd0SUBPvA07SA5hXkamkmY94jqK1Eqq1SHkDnsYSX17U0vVpxg%2A0%216453&scopes=user.info.basic&state=cuqq0u',
+      _raw: '/login/callback/?code=8UwWaEBkJm_d3YuDgh6l5N9aPgDTaDMgnLQGaCVsQo2GUc04z96HA0t5yg9FsXVxX8WwqAxDRKDnS9AfBOme3JnZ1Se6QUjBOVKmORRA0qZ3QcY-h03nfBc_B6vcyHXkp_1Su7seRPsfJts-W4OkSr7iDctaCynNIXxnLd0SUBPvA07SA5hXkamkmY94jqK1Eqq1SHkDnsYSX17U0vVpxg%2A0%216453&scopes=user.info.basic&state=cuqq0u'
+    },
+    params: {},
+    query: {
+      code: '8UwWaEBkJm_d3YuDgh6l5N9aPgDTaDMgnLQGaCVsQo2GUc04z96HA0t5yg9FsXVxX8WwqAxDRKDnS9AfBOme3JnZ1Se6QUjBOVKmORRA0qZ3QcY-h03nfBc_B6vcyHXkp_1Su7seRPsfJts-W4OkSr7iDctaCynNIXxnLd0SUBPvA07SA5hXkamkmY94jqK1Eqq1SHkDnsYSX17U0vVpxg*0!6453',
+      scopes: 'user.info.basic',
+      state: 'cuqq0u'
+    },
+    res: <ref *3> ServerResponse {
+      _events: [Object: null prototype
+        ] { finish: [Function: bound resOnFinish
+            ]
+        },
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: true,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: null,
+      _hasBody: true,
+      _trailer: '',
+      finished: false,
+      _headerSent: false,
+      socket: <ref *1> Socket {
+        connecting: false,
+        _hadError: false,
+        _parent: null,
+        _host: null,
+        _readableState: [ReadableState
+            ],
+        _events: [Object: null prototype
+            ],
+        _eventsCount: 8,
+        _maxListeners: undefined,
+        _writableState: [WritableState
+            ],
+        allowHalfOpen: true,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Server
+            ],
+        _server: [Server
+            ],
+        parser: [HTTPParser
+            ],
+        on: [Function: socketListenerWrap
+            ],
+        addListener: [Function: socketListenerWrap
+            ],
+        prependListener: [Function: socketListenerWrap
+            ],
+        _paused: false,
+        _httpMessage: [Circular *3
+            ],
+            [Symbol(async_id_symbol)
+            ]: 38,
+            [Symbol(kHandle)
+            ]: [TCP
+            ],
+            [Symbol(kSetNoDelay)
+            ]: false,
+            [Symbol(lastWriteQueueSize)
+            ]: 0,
+            [Symbol(timeout)
+            ]: null,
+            [Symbol(kBuffer)
+            ]: null,
+            [Symbol(kBufferCb)
+            ]: null,
+            [Symbol(kBufferGen)
+            ]: null,
+            [Symbol(kCapture)
+            ]: false,
+            [Symbol(kBytesRead)
+            ]: 0,
+            [Symbol(kBytesWritten)
+            ]: 0,
+            [Symbol(RequestTimeout)
+            ]: undefined
+        },
+      _header: null,
+      _keepAliveTimeout: 5000,
+      _onPendingData: [Function: bound updateOutgoingData
+        ],
+      _sent100: false,
+      _expect_continue: false,
+      req: [Circular *2
+        ],
+      locals: [Object: null prototype
+        ] {},
+        [Symbol(kCapture)
+        ]: false,
+        [Symbol(kNeedDrain)
+        ]: false,
+        [Symbol(corked)
+        ]: 0,
+        [Symbol(kOutHeaders)
+        ]: [Object: null prototype
+        ] { 'x-powered-by': [Array
+            ]
+        }
+    },
+    route: Route {
+      path: '/login/callback',
+      stack: [
+            [Layer
+            ]
+        ],
+      methods: { get: true
+        }
+    },
+    [Symbol(kCapture)
+    ]: false,
+    [Symbol(RequestTimeout)
+    ]: undefined
+}

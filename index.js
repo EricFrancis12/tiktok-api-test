@@ -17,7 +17,7 @@ app.get('/login', (req, res) => {
 
     // OLD URL: 
     // let url = 'https://open-api.tiktok.com/platform/oauth/connect/';
-    
+
     let url = 'https://www.tiktok.com/v2/auth/authorize/';
 
     url += `?client_key=${process.env.TIKTOK_API_CLIENT_KEY}`;
@@ -38,11 +38,18 @@ app.get('/login', (req, res) => {
 
 app.get('/login/callback', (req, res) => {
     console.log(req);
+    console.log(req.query);
     console.log('GET callback received');
+
+    res.status(200).json({
+        access_token: req.query.code,
+        token_type: 'Bearer'
+    });
 });
 
 app.post('/login/callback', (req, res) => {
     console.log(req);
+    console.log(req.body);
     console.log('POST callback received');
 });
 
