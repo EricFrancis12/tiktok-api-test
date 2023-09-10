@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+const { oauth } = require('../oauth/oauth');
+
 
 
 router.get('/', (req, res) => {
@@ -32,15 +34,28 @@ router.get('/', (req, res) => {
 
 
 
-router.get('/callback', (req, res) => {
-    console.log(req);
-    console.log(req.query);
-    console.log('GET callback received');
+router.get('/callback', async (req, res) => {
+    try {
+        console.log(req);
+        console.log(req.query);
+        console.log('GET callback received');
 
-    res.status(200).json({
-        code: req.query.code,
-        token_type: 'Bearer'
-    });
+        const { oauthData } = await oauth(req.query.code);
+
+        res.status(200).render('accessToken', {
+            auth: {
+                code: req.query.code,
+                oauthData
+            },
+            localRoot: process.env.LOCAL_ROOT || 'http://localhost:3000'
+        });
+    } catch (err) {
+        console.error('Error:', err.message);
+        return res.status(500).json({
+            success: false,
+            message: err.message
+        });
+    }
 });
 
 router.post('/callback', (req, res) => {
