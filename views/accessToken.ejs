@@ -17,7 +17,8 @@
             async function getBrands() {
                 if (!localRoot) return null;
 
-                const res = await fetch(localRoot);
+                const endpoint = `${localRoot}/brands`;
+                const res = await fetch(endpoint);
                 const resJSON = await res.json();
                 console.log(resJSON);
             }
