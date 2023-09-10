@@ -45,7 +45,8 @@ router.get('/callback', async (req, res) => {
         res.status(200).render('accessToken', {
             auth: {
                 code: req.query.code,
-                oauthData
+                oauthData,
+                timestamp: Date.now()
             },
             localRoot: process.env.LOCAL_ROOT || 'http://localhost:3000'
         });
