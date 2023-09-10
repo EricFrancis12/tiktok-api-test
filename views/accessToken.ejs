@@ -8,11 +8,12 @@
 </head>
 
 <body>
-    <%= locals.auth || `` %>
-
+    <div>
+        <%= JSON.stringify(locals.auth || {}) %>
+    </div>
 
         <script>
-            const localRoot = '<%= locals.localRoot || `` %>';
+            const localRoot = '<%= locals.localRoot || `http://localhost:3000` %>';
 
             async function getBrands() {
                 if (!localRoot) return null;

@@ -7,6 +7,12 @@ app.use(express.json());
 
 
 
+app.get('/', (req, res) => {
+    res.status(200).send('/Root');
+});
+
+
+
 const loginRouter = require('./routes/login/login');
 app.use('/login', loginRouter);
 
@@ -18,4 +24,5 @@ app.use('/upload', uploadRouter);
 
 
 
-app.listen(process.env.PORT, () => console.log(`Server running at port ${process.env.PORT}`));
+const port = process.env.PORT || 3001;
+app.listen(port, () => console.log(`Server running on port ${port}`));
