@@ -40,7 +40,7 @@ router.get('/callback', async (req, res) => {
         console.log(req.query);
         console.log('GET callback received');
 
-        const { oauthData } = await oauth(req.query.code);
+        const oauthData = await oauth(req.query.code);
 
         res.status(200).render('accessToken', {
             auth: {
