@@ -11,6 +11,9 @@
     <div>
         <%= JSON.stringify(locals.auth || {}) %>
     </div>
+    <div>
+        <button onclick="getBrands()">Get Brands</button>
+    </div>
 
         <script>
             const localRoot = '<%= locals.localRoot || `http://localhost:3000` %>';
