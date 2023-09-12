@@ -5,7 +5,7 @@ const { oauth } = require('../oauth/oauth');
 
 
 
-router.get('/', (req, res) => {
+router.get('/TT', (req, res) => {
     // IMPORTANT, it is your responsibility to store a csrf token
     // in your database, to be able to prevent xss attacks, read more
     // here (section 2.1) =>  https://developers.tiktok.com/doc/login-kit-web
