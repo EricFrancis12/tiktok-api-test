@@ -43,11 +43,11 @@ router.get('/callback', async (req, res) => {
         const oauthData = await oauth(req.query.code);
 
         res.status(200).render('accessToken', {
-            auth: {
+            auth: JSON.stringify({
                 code: req.query.code,
                 oauthData,
                 timestamp: Date.now()
-            },
+            }),
             localRoot: process.env.LOCAL_ROOT || 'http://localhost:3000'
         });
     } catch (err) {
