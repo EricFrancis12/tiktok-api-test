@@ -11,11 +11,14 @@
     <div>
         <%= JSON.stringify(locals.auth || {}, null, 4) %>
     </div>
+    <br>
+    <br>
     <div>
-        <button onclick="getBrands()">Get Brands</button>
+        <!-- <button onclick="getBrands()">Get Brands</button> -->
         <br>
         <br>
         <label for="account_id">
+            Enter account_id here:
             <input id="account_id" type="text">
         </label>
         <br>
@@ -41,7 +44,7 @@
         async function postData() {
             if (!localRoot) return null;
 
-            const account_id = document.querySelector('input#account_id').value;
+            const outputAccount_id = document.querySelector('input#account_id').value;
             const endpoint = `${localRoot}/upload/init`;
             const res = await fetch(endpoint, {
                 headers: {
@@ -49,7 +52,7 @@
                 },
                 method: 'POST',
                 body: JSON.stringify({
-                    account_id,
+                    outputAccount_id,
                     auth: '<%= JSON.stringify(locals.auth || {}) || `` %>'
                 })
             });
