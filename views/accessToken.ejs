@@ -19,13 +19,13 @@
         <br>
         <label for="localRoot">
             Posting to:
-            <input id="localRoot" type="text">
+            <input id="localRoot" type="text" value="<%= (locals.localRoot || '') %>">
         </label>
         <br>
         <br>
         <label for="account_id">
             Enter account_id here:
-            <input id="account_id" type="text" value="<%= (locals.localRoot || '') %>">
+            <input id="account_id" type="text">
         </label>
         <br>
         <button onclick="postData()">Post Data</button>
