@@ -17,9 +17,15 @@
         <!-- <button onclick="getBrands()">Get Brands</button> -->
         <br>
         <br>
+        <label for="localRoot">
+            Posting to:
+            <input id="localRoot" type="text">
+        </label>
+        <br>
+        <br>
         <label for="account_id">
             Enter account_id here:
-            <input id="account_id" type="text">
+            <input id="account_id" type="text" value="<%= (locals.localRoot || '') %>">
         </label>
         <br>
         <button onclick="postData()">Post Data</button>
@@ -28,8 +34,6 @@
     </div>
 
     <script>
-        const localRoot = '<%= locals.localRoot || `http://localhost:3000` %>';
-
         async function getBrands() {
             if (!localRoot) return null;
 
@@ -42,9 +46,9 @@
         }
 
         async function postData() {
-            if (!localRoot) return null;
+            const outputAccount_id = document.querySelector('input#account_id')?.value;
+            const localRoot = document.querySelector('input#account_id')?.value;
 
-            const outputAccount_id = document.querySelector('input#account_id').value;
             const endpoint = `${localRoot}/upload/init`;
             const res = await fetch(endpoint, {
                 headers: {
